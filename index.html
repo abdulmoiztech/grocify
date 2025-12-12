@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Groceries</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }</script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Section -->
+  <div id="home" class="min-h-screen bg-[url('Image.png')] bg-cover bg-center bg-no-repeat w-full px-6 md:px-28 py-5 relative text-white">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between py-3 px-6 md:px-10 bg-gray-900 text-white fixed top-0 left-0 w-full z-50">
+      <img src="logo.png" alt="logo" class="w-32 md:w-40 cursor-pointer" />
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-5 text-sm sm:text-base">
+        <li><a href="#home" class="no-underline text-white px-2 hover:underline">Home</a></li>
+        <li><a href="#about" class="no-underline text-white px-2 hover:underline">About us</a></li>
+        <li><a href="#features" class="no-underline text-white px-2 hover:underline">Menu</a></li>
+        <li><a href="#contact" class="no-underline text-white px-2 hover:underline">Contact</a></li>
+      </ul>
+
+      <!-- Cart Icon -->
+      <div class="flex items-center space-x-4">
+        <img src="cart.png" alt="cart" class="w-7 md:w-8 cursor-pointer" />
+
+        <!-- Hamburger Icon -->
+        <button class="md:hidden focus:outline-none" onclick="toggleMenu()">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+               xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-gray-900 text-white px-6 pt-2 pb-4 space-y-2 fixed top-16 left-0 w-full z-40">
+      <a href="#home" class="block hover:underline">Home</a>
+      <a href="#about" class="block hover:underline">About us</a>
+      <a href="#features" class="block hover:underline">Menu</a>
+      <a href="#contact" class="block hover:underline">Contact</a>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="mt-28 md:mt-48 max-w-xl">
+      <h1 class="text-4xl md:text-6xl font-semibold leading-normal">Groceries<br>Delivery in <span class="font-light">15 mins</span></h1>
+      <p class="mt-2 text-sm md:text-base">Grocify offer a wide range of products, including fresh products, meats,<br>
+        dairy, baked goods and non-perishable items.</p>
+      <div class="mt-10">
+        <a href="https://wa.me/923118354527" target="_blank"
+           class="bg-yellow-300 rounded-3xl py-3 px-8 font-medium inline-block mr-4 hover:bg-transparent hover:text-white hover:border hover:border-yellow-300">Order Now</a>
+        <a href="#" class="underline">Download App <span class="text-lg inline-block rotate-90">&#10148;</span></a>
+      </div>
+    </div>
+
+    <!-- Grocery Image -->
+    <img src="grocery-image.png" alt="grocery Pic"
+         class="w-full sm:w-3/4 lg:w-2/3 xl:w-1/2 xl:absolute bottom-0 right-10 h-50 mt-10 md:mt-16" />
+
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="text-gray-800 bg-yellow-100 px-6 md:px-28 py-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6">Why Choose Grocify?</h2>
+      <p class="text-lg leading-relaxed">
+        At <span class="font-semibold">Grocify</span>, we prioritize your time and health.
+        Our goal is to make grocery shopping fast, easy, and stress-free.
+        With our fast and reliable delivery service, your daily essentials arrive in just 15 minutes.
+        Whether it's fresh fruits, vegetables, dairy, or baked goods — we deliver everything.
+        No more waiting in long supermarket lines or carrying heavy bags home.
+        Our app is simple to use and helps you shop from anywhere, anytime.
+        We offer top-quality products at the most affordable prices.
+        Your satisfaction is our top priority, and we are available 24/7 for support.
+        Join thousands of happy customers who trust Grocify every day.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <div id="features" class="bg-gray-100 px-6 md:px-28 py-20">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Menu</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+        
+        <!-- Feature Cards -->
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="Fast Delivery" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+          <p>Get your groceries delivered to your doorstep in just 15 minutes — quick and hassle-free.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="Fresh Products" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">Fresh Products</h3>
+          <p>We deliver only the freshest fruits, vegetables, and dairy — quality you can taste.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="Affordable Prices" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">Affordable Prices</h3>
+          <p>Enjoy great deals and discounts on your daily essentials without compromising on quality.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="Secure Payment" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">Secure Payments</h3>
+          <p>Pay safely through our encrypted payment gateways — your security is our priority.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="24/7 Support" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+          <p>Need help? Our customer support is available around the clock to assist you.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
+          <img src="download.jpg" alt="Live Order Tracking" class="w-16 mx-auto mb-4">
+          <h3 class="text-xl font-semibold mb-2">Live Order Tracking</h3>
+          <p>Track your order in real time and know exactly when your groceries will arrive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="bg-yellow-100 px-6 md:px-28 py-20">
+    <div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl p-10">
+      <h2 class="text-4xl font-extrabold text-center text-red-600 mb-6">Let's Contact 🍕</h2>
+      <p class="text-center text-gray-600 mb-10">
+        Whether you're hungry for answers or a quick chat, reach out to us anytime!
+      </p>
+      <div class="grid md:grid-cols-2 gap-10 text-gray-800">
+        <div class="space-y-6">
+          <div class="flex items-center space-x-4">
+            <img src="https://img.icons8.com/ios-filled/50/ff0000/phone.png" class="w-6 h-6" alt="Phone">
+            <span class="text-lg font-medium">
+              <a href="tel:+923001234567" target="_blank">+92 311 8354527</a></span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <img src="https://img.icons8.com/ios-filled/50/ff0000/email.png" class="w-6 h-6" alt="Email">
+            <span class="text-lg font-medium">
+              <a href="mailto:moiz56091@gmail.com" target="_blank">moiz56091@gmail.com</a></span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <img src="https://img.icons8.com/ios-filled/50/ff0000/marker.png" class="w-6 h-6" alt="Location">
+            <span class="text-lg font-medium">Main Street 123, Karachi, Pakistan</span>
+          </div>
+          <a href="https://wa.me/923118354527" target="_blank"
+             class="inline-flex items-center bg-green-500 text-white px-6 py-3 rounded-full shadow-md hover:bg-green-600 transition">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" class="mr-2" alt="WhatsApp" />
+            Chat on WhatsApp
+          </a>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-md h-64">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.999632842194!2d67.00111131500044!3d24.860734984049717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33fba4fdbda53%3A0x8fdfcde72a1b3533!2sKarachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1628333115502!5m2!1sen!2s"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-white px-6 md:px-28 py-10">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-4">Grocify</h3>
+        <p class="text-gray-400 text-sm">
+          Fast and fresh grocery delivery right to your doorstep. Save time and shop smart with Grocify!
+        </p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+          <li><a href="#about" class="hover:text-yellow-300">About Us</a></li>
+          <li><a href="#features" class="hover:text-yellow-300">Menu</a></li>
+          <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-300 text-sm">
+          <li><span>📞</span><a href="tel:+923118354627">+92 311 8354527</a></li>
+          <li><span>📧</span><a href="mailto:moiz56091@gmail.com">moiz56091@gmail.com</a></li>
+          <li><span>📍</span> Karachi, Pakistan</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/share/17HFTo62Eu/" target="_blank" class="hover:text-yellow-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"/></a>
+          <a href="https://www.instagram.com/abdulmoiz_28/" target="_blank" class="hover:text-yellow-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"/></a>
+          <a href="https://wa.me/923118354527" target="_blank" class="hover:text-yellow-300"><img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png" alt="WhatsApp"/></a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-sm text-gray-500 border-t border-gray-700 pt-4">
+      &copy; 2025 Grocify. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
